@@ -1,0 +1,20 @@
+<h2 class="text-center">User Info and Preference</h2>
+
+<div class="container">
+   <div ng-if="myInfoCtrl.userInfo.user">
+      This line is just to show that myInfoCtrl.userInfo.user is true/present
+      <div class="user-details">
+        <div>{{$myInfoCtrl.userInfo.user.firstname}}</div>
+        <div>{{$myInfoCtrl.userInfo.user.lastname}}</div>
+        <div>{{$myInfoCtrl.userInfo.user.email}}</div>
+        <div>{{$myInfoCtrl.userInfo.user.phone}}</div>
+      </div>
+      <menu-item 
+          menu-item= "myInfoCtrl.userInfo.menuItem">
+      </menu-item> 
+   </div>
+    <div ng-if="!myInfoCtrl.userInfo" class="signup-error text-center">
+        <p>Not Signed Up Yet. &nbsp;&nbsp; <a ui-sref="public.signup">Sign Up Now!</a>
+        </p>
+    </div>   
+</div>
