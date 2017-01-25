@@ -2,12 +2,10 @@
 
 <div class="container">
    <div ng-if="myInfoCtrl.userInfo.user">
-      This line is just to show that myInfoCtrl.userInfo.user is true/present
-      <div class="user-details">
-        <div>{{$myInfoCtrl.userInfo.user.firstname}}</div>
-        <div>{{$myInfoCtrl.userInfo.user.lastname}}</div>
-        <div>{{$myInfoCtrl.userInfo.user.email}}</div>
-        <div>{{$myInfoCtrl.userInfo.user.phone}}</div>
+      <div class="user-details col-md-8">
+        <h3>{{myInfoCtrl.userInfo.user.firstname}} {{myInfoCtrl.userInfo.user.lastname}}</h3>
+        <div>{{myInfoCtrl.userInfo.user.email}}</div>
+        <div>{{myInfoCtrl.userInfo.user.phone}}</div>
       </div>
       <menu-item 
           menu-item= "myInfoCtrl.userInfo.menuItem">
