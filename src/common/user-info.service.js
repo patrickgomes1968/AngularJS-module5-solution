@@ -10,13 +10,18 @@ function UserInfoService() {
   var userInfo = null;
 
   service.saveInfo = function(menuItem, user) {
-    userInfo = {}};  
+    userInfo = {};  
     userInfo.menuItem = menuItem;
     userInfo.user = user;
-    //console.log(userInfo);
+    // console.log(userInfo);
+    // console.log(menuItem);
   };
 
-  service.getInfo = function (user) {
+  service.getUserInfo = function (user) {
+    return userInfo;
+  };
+
+  service.getUser = function (user) {
     return userInfo.user;
   };
 
